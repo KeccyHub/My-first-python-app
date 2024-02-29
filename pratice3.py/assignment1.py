@@ -10,42 +10,47 @@ else:
 print('''The following are our bus stops. 
 Notice: we do not stop anywhere else that is not designated in the options below''')
 print("1. Iyana Ipaja - 500\n2. Isheri Christ Embassy - 700\n3. Igando Phase 2 - 900\n4. First Gate - 300\n5. Ikotun - 800\nPick your Option")
-stops={"Iyana Ipaja":500, "Isheri Christ Embassy":700, "Igando Phase 2":900, "First Gate":300} 
-stops["Ikotun"]=800
-stop_reply = str(input(">> ")).lower()
-if stop_reply == "Iyana Ipaja" or 1:
-    no_of_seats = int(input("Number of seats: "))
-    totl = no_of_seats * stops["Iyana Ipaja"]
-    print(totl)
-elif stop_reply == "Isheri_christ_embassy" or 2:
-    no_of_seats = int(input("Number of seats: "))
-    total = no_of_seats * stops["Isheri_christ_embassy"]
+stops={"Iyana Ipaja":500, "Isheri Christ Embassy":700, "Igando Phase 2":900, "First Gate":300, "Ikotun":800} 
+stops_reply = str(input("Input>> "))
+if stops_reply == "Iyana Ipaja":
+    seats = int(input("Number of seats: "))
+    print(stops["Iyana Ipaja"])
+    total = seats * stops["Iyana Ipaja"]
     print(total)
-elif stop_reply == "Igando_phase_2" or 3:
+elif stops_reply == "Isheri Christ Embassy":
     no_of_seats = int(input("Number of seats: "))
-    ttal = no_of_seats * stops["Igando_phase_2"]
-    print(ttal)
-elif stop_reply == "first gate" or 4:
-    no_of_seats = int(input("Number of seats: "))
-    totalp = no_of_seats * stops["First_gate"]
-    print(totalp)
-elif stop_reply=="Ikotun" or 5:
-    no_of_seats = int(input("Number of seats: "))
-    tt = no_of_seats * stops["Ikotun"]
+    print(stops["Isheri Christ Embassy"])
+    total = no_of_seats * stops["Isheri Christ Embassy"]
+    print(total)
+elif stops_reply == "Igando Phase 2":
+    seats = int(input("Number of seats: "))
+    print(stops["Igando Phase 2"])
+    total = seats * stops["Igando Phase 2"]
+    print(total)
+elif stops_reply == "First Gate":
+    seats = int(input("Number of seats: "))
+    print(stops["First Gate"])
+    total = seats * stops["First Gate"]
+    print(total)
+elif stops_reply=="Ikotun":
+    seats = int(input("Number of seats: "))
+    print(stops["Ikotun"])
+    total = seats * stops["Ikotun"]
+    print(total)
 else:
-    print("Inavlid Response")
-print("How would you like to pay?")
-print("a. Cash")
-print("b. Bank transfer")
+    print("Invalid Response")
+print("How would you like to pay? \na. Bank transfer \nb. Cash")
 response = str(input("")).lower()
-if response == "a" or "cash":
-    print("Do you have the exact amount? NOTE: We do not have petty cash ")
-    print("Choose yes or no")
+if response == "a" or response=="Bank transfer":
+    print("You may Proceed")
+    print("✔")
+elif response=="b" or response=="Cash":
+    print("Do you have the exact amount? NOTE: We do not have petty cash \na. yes \nb. no")
     choose = str(input(" ")).lower()
-    if choose == "yes":
+    if choose == "yes" or choose=="a":
         print("You may proceed")
         print("✔")
-    elif choose == "no":
+    elif choose == "no" or choose=="b":
         print("Choose another payment option")
         print("proceed with bank transfer? Yes or no")
         again = str(input(" "))
@@ -56,13 +61,8 @@ if response == "a" or "cash":
         else:
             print("Invalid Option")
     else:
-        print("Invalid Option❌")
-elif response == "b" or "Bank transfer":
-    print("You may Proceed")
-    print("✔")
+        print("Invalid")
 else:
-    print("Invalid Option❌")
-
-print("HAVE A WONDERFUL RIDE")
+    print("Error")
 
 print("KECCY'S TRANSIT, THE CHOICE YOU'LL NEVER REGRET🎇🎇")
