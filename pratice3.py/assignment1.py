@@ -9,28 +9,29 @@ else:
     print("You're about to take the ride of your life!")
 print('''The following are our bus stops. 
 Notice: we do not stop anywhere else that is not designated in the options below''')
-Iyana_ipaja = 500
-Isheri_christ_embassy = 700
-Igando_phase_2 = 900
-First_gate = 1000
-print("1. Iyana Ipaja - 500\n2. Isheri Christ Embassy - 700\n3. Igando Phase 2 - 900\n4. First Gate - 300\n.Pick your Option")  
+print("1. Iyana Ipaja - 500\n2. Isheri Christ Embassy - 700\n3. Igando Phase 2 - 900\n4. First Gate - 300\n5. Ikotun - 800\nPick your Option")
+stops={"Iyana Ipaja":500, "Isheri Christ Embassy":700, "Igando Phase 2":900, "First Gate":300} 
+stops["Ikotun"]=800
 stop_reply = str(input(">> ")).lower()
-if stop_reply == "Iyana ipaja" or 1:
+if stop_reply == "Iyana Ipaja" or 1:
     no_of_seats = int(input("Number of seats: "))
-    total = no_of_seats * Iyana_ipaja
-    print(total)
+    totl = no_of_seats * stops["Iyana Ipaja"]
+    print(totl)
 elif stop_reply == "Isheri_christ_embassy" or 2:
     no_of_seats = int(input("Number of seats: "))
-    total = no_of_seats * Isheri_christ_embassy
+    total = no_of_seats * stops["Isheri_christ_embassy"]
     print(total)
 elif stop_reply == "Igando_phase_2" or 3:
     no_of_seats = int(input("Number of seats: "))
-    total = no_of_seats * Igando_phase_2
-    print(total)
+    ttal = no_of_seats * stops["Igando_phase_2"]
+    print(ttal)
 elif stop_reply == "first gate" or 4:
     no_of_seats = int(input("Number of seats: "))
-    total = no_of_seats * First_gate
-    print(total)
+    totalp = no_of_seats * stops["First_gate"]
+    print(totalp)
+elif stop_reply=="Ikotun" or 5:
+    no_of_seats = int(input("Number of seats: "))
+    tt = no_of_seats * stops["Ikotun"]
 else:
     print("Inavlid Response")
 print("How would you like to pay?")
@@ -56,7 +57,7 @@ if response == "a" or "cash":
             print("Invalid Option")
     else:
         print("Invalid Option❌")
-elif response == "b":
+elif response == "b" or "Bank transfer":
     print("You may Proceed")
     print("✔")
 else:
@@ -64,5 +65,4 @@ else:
 
 print("HAVE A WONDERFUL RIDE")
 
-print("KECCY'S TRANSIT, THE CHOICE YOU'LL NEVEER REGRET🎇🎇")
-
+print("KECCY'S TRANSIT, THE CHOICE YOU'LL NEVER REGRET🎇🎇")

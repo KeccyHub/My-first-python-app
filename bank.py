@@ -62,7 +62,7 @@ elif  choose == 2:
                         print(f"Phone number: {ph_num}") 
                         print(f"\nYour Login was Successful! \nWelcome, {names} \n Your account number is {result}")                                                       
                 else: 
-                    print("Login Failed!")
+                    print("Registration Failed!")
             else:
                 print("Error")
         else:
