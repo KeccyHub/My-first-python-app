@@ -20,15 +20,15 @@
 #     print("Invalid Command")
 
 import sys
-import random as r
-list=[0,1,2,3,4,5,6,7,8,9]
-r.shuffle(list)
-print(list)
+# import random as r
+# list=[0,1,2,3,4,5,6,7,8,9]
+# r.shuffle(list)
+# print(list)
 
-for x in list:
-    for y in list:
-        result=x-y
-        print(result)
+# for x in list:
+#     for y in list:
+#         result=x-y
+#         print(result)
 max_booking=20
 initial_booking=0
 num_booking=int(input("Enter the number of booking\n>> "))
@@ -43,3 +43,6 @@ while initial_booking<=num_booking:
         print(result)
         print(predicts)
         print("You Win!")
+        break
+else:
+    print("You loose")
